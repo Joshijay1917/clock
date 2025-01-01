@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+}
+.clockbase{
+    background-color: #343434;
+    box-shadow: 0 0 5px 0 #000;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.clockbase span{
+    position: absolute;
+    display: inline-block;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clockbase span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+}
+.hbar{
+    position: relative;
+    background-color: rgb(255, 145, 0);
+    width: 65px;
+    height: 2px;
+    top: 4px;
+}
+.mbar{
+    position: absolute;
+    background-color: rgb(0, 183, 255);
+    width: 90px;
+    height: 2px;
+    top: 4px;
+}
+.sbar{
+    position: absolute;
+    background-color: white;
+    width: 120px;
+    height: 2px;
+    top: 4px;
+}
+.hour{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: rotate(calc(22deg * 30));
+}
+.minute{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: rotate(0deg);
+}
+.second{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: rotate(0deg);
+}
